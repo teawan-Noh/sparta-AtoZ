@@ -4,8 +4,10 @@ app = Flask(__name__)
 
 from pymongo import MongoClient
 
-client = MongoClient('mongodb://13.209.18.100', 27017, username="test", password="test")
-db = client.dbsparta_plus_week4
+# client = MongoClient('mongodb://13.209.18.100', 27017, username="test", password="test")
+client = MongoClient("mongodb://localhost:27017/")
+#로그인/회원가입 연습 디비
+db = client.dbsparta_plus_week5
 
 # JWT 토큰을 만들 때 필요한 비밀문자열입니다. 아무거나 입력해도 괜찮습니다.
 # 이 문자열은 서버만 알고있기 때문에, 내 서버에서만 토큰을 인코딩(=만들기)/디코딩(=풀기) 할 수 있습니다.
